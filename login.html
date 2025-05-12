@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Charily</title>
+    <!-- Favicon link -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Fontawesome6 Css link -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Bootstrap5 Css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Owl carousel Css link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <!-- select2 Css link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <!-- swiper Css link -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Nice select Css-link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <!-- intlTelInput Css link -->
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css" />
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body class="">
+    <!-- Nav section start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html"
+          ><img src="assets/img/logo/logo.png" alt="digiGoods"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <i class="fa-light fa-list"></i>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbar"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html"
+              ><img class="logo" src="assets/img/logo/logo.png" alt="digiGoods"
+            /></a>
+
+            <button
+              type="button"
+              class="cmn-btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fa-light fa-arrow-right"></i>
+            </button>
+          </div>
+          <div
+            class="offcanvas-body align-items-center justify-content-between"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="movies.html">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tv-shows.html">TV Shows</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="series.html">Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="billed-cast.html">Actors</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-right">
+          <ul class="custom-nav">
+            <li class="nav-item d-none d-sm-block">
+              <a
+                href=""
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#search-modal"
+              >
+                <i class="fa-regular fa-magnifying-glass"></i>
+                Search
+              </a>
+            </li>
+            <li class="nav-item d-none d-sm-block">
+              <a href="login.html" class="nav-link">
+                <i class="fa-regular fa-circle-user"></i>
+                Login
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pricing.html" class="nav-link p-0">
+                <div class="cmn-btn">
+                  <div class="btn-wrapper">
+                    <div class="main-text btn-single">
+                      <span><i class="fa-solid fa-crown"></i></span>
+                      <span class="d-none d-md-block">Subscription</span>
+                    </div>
+                    <div class="hover-text btn-single">
+                      <span><i class="fa-solid fa-crown"></i></span>
+                      <span class="d-none d-md-block">Subscription</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#popup-modal"
+              >
+                <i class="fa-regular fa-grid"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <div class="false-nav"></div>
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="offcanvasNavbar"
+          href="#offcanvasNavbar"
+          aria-current="page"
+          ><i class="fa-light fa-list"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"
+          ><i class="fa-light fa-planet-ringed"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active"><i class="fa-regular fa-house"></i></a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#"
+          data-bs-toggle="modal"
+          data-bs-target="#search-modal"
+          ><i class="fa-light fa-magnifying-glass"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+      </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- login-signup section start -->
+    <section class="login-register-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-9">
+            <div class="login-register-form">
+              <form>
+                <div class="section-header">
+                  <a href="index.html" class="logo">
+                    <img src="./assets/img/logo/logo-2.png" alt="" />
+                  </a>
+                  <h5>Login with mobile number</h5>
+                  <div class="description">
+                    Please select your country and enter mobile number
+                  </div>
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail2"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <input
+                      id="telephone"
+                      class="form-control"
+                      name="phone"
+                      type="tel"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <div
+                      class="form-check d-flex justify-content-between flex-wrap gap-2"
+                    >
+                      <div class="check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >I agree with
+                          <a href="policy.html" class="link">Privacy Policy</a>
+                          &amp;
+                          <a href="policy.html" class="link"
+                            >Terms of Service</a
+                          ></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <a href="checkout.html" class="cmn-btn w-100 mt-10">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">Continue</div>
+                        <div class="hover-text btn-single">Continue</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <hr class="divider" />
+
+                <div class="d-flex gap-3 justify-content-center mt-30">
+                  <a href="" class="social-btn">
+                    <i class="fa-brands fa-google"></i>
+                  </a>
+                  <a href="" class="social-btn">
+                    <i class="fa-brands fa-apple"></i>
+                  </a>
+                  <a href="" class="social-btn">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- login-signup section end -->
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+      <div class="container">
+        <div class="row gy-4 g-sm-5">
+          <div class="col-lg-4 col-sm-6">
+            <div class="footer-widget">
+              <div class="widget-logo">
+                <a href="index.html"
+                  ><img
+                    class="footer-logo"
+                    src="assets/img/logo/logo.png"
+                    alt="Charily"
+                /></a>
+              </div>
+
+              <div class="social-box-container">
+                <h4>Follow on social</h4>
+                <ul class="social-box mt-25">
+                  <li>
+                    <a href="https://facebook.com" aria-label="Facebook"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com" aria-label="Twitter"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com" aria-label="Linkedin"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com" aria-label="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com" aria-label="Instagram"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6 ps-lg-5">
+            <div class="footer-widget">
+              <h5 class="widget-title">Get a Involve</h5>
+              <ul>
+                <li><a class="widget-link" href="about.html">About</a></li>
+                <li><a class="widget-link" href="movies.html">Movies </a></li>
+                <li><a class="widget-link" href="index.html">Live Tv</a></li>
+                <li><a class="widget-link" href="blog.html">Top News</a></li>
+                <li>
+                  <a class="widget-link" href="contact.html">Popular Actor </a>
+                </li>
+                <li>
+                  <a class="widget-link" href="contact.html">Contact Us </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6 pt-sm-0 pt-3">
+            <div class="footer-widget">
+              <h5 class="widget-title">Legal</h5>
+              <ul>
+                <li>
+                  <a class="widget-link" href="privacy-policy.html"
+                    >Terms of Use</a
+                  >
+                </li>
+                <li>
+                  <a class="widget-link" href="privacy-policy.html"
+                    >API Terms of Use</a
+                  >
+                </li>
+                <li>
+                  <a class="widget-link" href="privacy-policy.html"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a class="widget-link" href="privacy-policy.html"
+                    >DMCA Policy</a
+                  >
+                </li>
+                <li>
+                  <a class="widget-link" href="privacy-policy.html"
+                    >Guideline
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 pt-sm-0 pt-3">
+            <div class="footer-widget">
+              <h5 class="widget-title">DOWNLOAD APP</h5>
+              <div class="store-box">
+                <a href="" class="item">
+                  <img src="./assets/img/store/google-play.png" alt="" />
+                </a>
+                <a href="" class="item">
+                  <img src="./assets/img/store/apple-store.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-hr" />
+        <!-- Copyright section start -->
+        <div class="copyright-section">
+          Copyright ©2025 MovieCore / reserved designed by BugFinder
+        </div>
+        <!-- Copyright section end -->
+      </div>
+    </section>
+    <!-- Footer Section end -->
+
+    <!-- Modal section start -->
+    <!-- popup modal -->
+    <div
+      class="modal fade popup-modal"
+      id="popup-modal"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="staticBackdropLabel">
+              Select Language
+            </h4>
+            <button
+              type="button"
+              class="cmn-btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-12">
+                <div id="formModal">
+                  <label class="form-label">Select language</label>
+                  <select class="modal-select2-image" name="state">
+                    <option value="us">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="bd">bangla</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer mt-10">
+            <a href="" class="cmn-btn">
+              <div class="btn-wrapper">
+                <div class="main-text btn-single">save</div>
+                <div class="hover-text btn-single">save</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search modal -->
+    <div
+      class="modal fade search-modal"
+      id="search-modal"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="search-box2">
+            <input type="text" class="form-control" placeholder="Search...." />
+            <div class="search-btn">
+              <i class="far fa-search"></i>
+            </div>
+          </div>
+          <h5 class="mt-15">Most Popular</h5>
+          <div class="search-product-box-container mt-10">
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-1.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Heralds</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-2.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Rogue Mission</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-3.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Titan’s Wrath</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-4.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Split Bruce</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-5.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Red Horizon</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-6.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Dirilis Ertugrul</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-7.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Aşk ve Kader</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-8.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Karanlık Sırlar</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-9.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Ölümsüz Aşk</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-10.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">The Last Promise</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-11.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Silent Howl</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-12.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Demon’s Lullaby</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-13.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Black Veil</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-14.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Room 404</div>
+              </div>
+            </a>
+            <a href="product-details.html" class="product-box">
+              <div class="img-box">
+                <img src="./assets/img/product/product-img-15.png" alt="" />
+              </div>
+              <div class="text-box">
+                <div class="title mt-0">Blood Harvest</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal section end -->
+
+    <!-- Jquery Js link -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- counterup Js link -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Nice select Js link -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- intlTelInput Js link -->
+    <script src="assets/js/intlTelInput.min.js"></script>
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
