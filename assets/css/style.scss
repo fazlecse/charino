@@ -77,6 +77,7 @@ Typography
   --bg-color5: #2E3933;
   --bg-color6: #0D1812;
   --bg-color7: #1E2821;
+  --bg-color8: #F3FBF7;
   --border-color1: #F5F5F5;
   --border-color2: #ECEBEB;
   --border-color3: rgba(255, 255, 255, 0.06);
@@ -766,11 +767,12 @@ body::-webkit-scrollbar-thumb {
       border: 1px solid rgb(var(--primary-color)) !important;
       font-size: 16px !important;
       transition: var(--transition);
-      color: rgb(var(--primary-color)) !important;
+      color: rgb(var(--white)) !important;
+      background: rgb(var(--primary-color)) !important;
 
       &:hover {
-        background: rgb(var(--primary-color)) !important;
-        color: rgb(var(--white)) !important;
+        background: transparent !important;
+        color: rgb(var(--primary-color)) !important;
       }
     }
 
@@ -2862,8 +2864,8 @@ hr {
 }
 
 .footer-hr {
-  margin: 30px 0;
-  border-color: var(--border-color2);
+  border-color: #55597C;
+  opacity: 0.5;
 }
 
 .cmn-hr {
@@ -3236,7 +3238,7 @@ hr.divider:after {
 
 // Reviews section start
 .reviews {
-  font-size: 14px;
+  font-size: 18px;
 
   i {
     color: #dee2e8;
@@ -6020,6 +6022,10 @@ Margin top start
   margin-top: 50px;
 }
 
+.mt-55 {
+  margin-top: 50px;
+}
+
 .mt-60 {
   margin-top: 60px;
 }
@@ -6413,6 +6419,7 @@ Padding bottom end
   padding: 10px 0;
   z-index: 999;
   overflow: hidden;
+  background-color: var(--bg-color8);
 
   .container {
     position: relative;
@@ -7049,8 +7056,17 @@ About section2 end
 .service-box {
   background-image: url(../img/service/serevice-img.png);
   border-radius: 20px;
-  padding: 269px 60px 24px;
+  padding: 262px 60px 24px;
   background-size: 100% 100%;
+
+  &:hover {
+    .content-box {
+      .icon-box {
+        background-color: rgb(var(--secondary-color));
+        color: rgb(var(--white));
+      }
+    }
+  }
 
   .content-box {
     border-radius: 20px;
@@ -7070,6 +7086,7 @@ About section2 end
       font-size: 26px;
       margin: 0 auto;
       border: 1px dashed rgb(var(--primary-color));
+      transition: var(--transition);
     }
 
     .text-box {
@@ -7211,6 +7228,137 @@ Feature section end
 
 .causes-box {
   border: 1px solid rgb(var(--primary-color), 0.5);
+  border-radius: 22px;
+  display: flex;
+  gap: 24px;
+
+  &:hover {
+    .img-box {
+      &::after {
+        height: 250%;
+        transition: all 600ms linear;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.one {
+    .img-box {
+      width: 335px;
+      min-width: 335px;
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .img-box {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 0%;
+      left: 50%;
+      top: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%) rotate(-45deg);
+      z-index: 1;
+    }
+
+    img {
+      border-radius: 20px 20px 0 0;
+    }
+  }
+
+  .text-box {
+    padding: 24px 16px;
+
+    .title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
+
+  }
+
+  .category-tag {
+    font-size: 20px;
+    color: rgb(var(--heading-color));
+    background-color: rgb(var(--secondary-color));
+    border-radius: 6px;
+    padding: 8px 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: 700;
+  }
+
+  .custom-progress {
+    .progress {
+      height: 4px;
+    }
+  }
+
+  .view-details-btn {
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: underline;
+    display: inline-block;
+    color: rgb(var(--primary-color));
+  }
+}
+
+.funding-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgb(var(--heading-color));
+}
+
+.section-header {
+  .left-side {
+    max-width: 732px;
+  }
+}
+
+/*----------------------------------------------
+00. Cause Category section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+00. Cause Category section3 start
+----------------------------------------------*/
+.admin-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .admin-img-box {
+    width: 32px;
+    height: 32px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .admin-text-box {
+    .title {
+      font-size: 16px;
+    }
+  }
+}
+
+.causes-box3 {
+  border: 1px solid rgb(var(--primary-color), 0.5);
   border-radius: 20px;
 
   .img-box {
@@ -7250,7 +7398,7 @@ Feature section end
 }
 
 /*----------------------------------------------
-00. Cause Category section end
+00. Cause Category section3 end
 ----------------------------------------------*/
 .cause-category-section2 {
   background-color: var(--bg-color2);
@@ -7498,6 +7646,101 @@ Event section2 end
 }
 
 .team-box {
+  background-color: var(--bg-color1);
+  border-radius: 20px;
+
+  .img-box {
+    position: relative;
+    z-index: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text-box {
+    margin-top: 16px;
+    padding: 0 24px 24px;
+  }
+
+  .social-container {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+
+    &:hover {
+      .social-box {
+        transform: scaleY(1);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .social-box {
+      display: inline-flex;
+      padding: 10px 8px;
+      border-radius: 20px;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #1F2421;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      bottom: calc(100% + 10px);
+      transition: var(--transition);
+
+      a {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        background-color: rgb(var(--white));
+      }
+    }
+  }
+}
+
+.social-hover-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(var(--primary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--white));
+  font-size: 22px;
+
+  &:hover {
+    color: rgb(var(--white));
+  }
+}
+
+/*----------------------------------------------
+Team section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+00. Team section3 start
+----------------------------------------------*/
+.team-section3 {
+  background-color: var(--bg-color2);
+
+  .section-header {
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto 80px;
+  }
+
+  .button-box {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.team-box3 {
   margin-right: 30px;
 
   &:hover {
@@ -7560,13 +7803,99 @@ Event section2 end
 }
 
 /*----------------------------------------------
-Team section end
+Team section3 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
 00. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
+  position: relative;
+  background-color: var(--bg-color2);
+
+  .section-header {
+    max-width: 650px;
+    margin-bottom: 48px;
+  }
+}
+
+
+.testimonial-box {
+  position: relative;
+  white-space: normal;
+  padding: 32px;
+  background: var(--white);
+  border-radius: 20px;
+  transition: var(--transition);
+  background-color: var(--bg-color1);
+
+  .profile-box {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .profile-thumbs {
+    background-color: var(--white);
+
+
+    img {
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+  }
+
+  .quote-icon {
+    font-size: 45px;
+    color: rgb(var(--secondary-color));
+    position: absolute;
+    right: 10px;
+    top: -23px;
+  }
+
+  .quote-area {
+    margin-top: 30px;
+
+  }
+}
+
+.testimonial-carousel {
+  .item {
+    padding-top: 14px;
+  }
+
+  .owl-nav {
+    margin-top: 0;
+
+    .owl-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      left: -30px;
+    }
+
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      right: -30px;
+    }
+  }
+}
+
+/*----------------------------------------------
+Testimonial section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+00. Testimonial section2 start
+----------------------------------------------*/
+.testimonial-section2 {
   position: relative;
 
   .section-header {
@@ -7592,7 +7921,7 @@ Team section end
   }
 }
 
-.testimonial-box {
+.testimonial-box2 {
   display: flex;
   border: 1px solid rgb(var(--primary-color), 0.5);
   border-radius: 20px;
@@ -7628,16 +7957,13 @@ Team section end
 }
 
 /*----------------------------------------------
-Testimonial section end
+Testimonial section2 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
 CTA section start
 ----------------------------------------------*/
 .cta-section {
-  background-color: var(--bg-color3);
-
-
   .section-subtitle {
     color: rgb(var(--white));
   }
@@ -7652,42 +7978,26 @@ CTA section start
 
   .left-side {
     max-width: 689px;
-    padding: 40px 80px;
     position: relative;
     z-index: 0;
   }
 
   .right-side {
     .img-box {
-      img {
-        --webkit-mask-image: url(../img/cta/cta-shape.png);
-        mask-image: url(../img/cta/cta-shape.png);
-        -webkit-mask-size: auto 100%;
-        mask-size: auto 100%;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: right;
-        mask-position: right;
-        height: 100%;
-      }
+      position: absolute;
+      bottom: 0;
     }
-  }
-
-  .vector-img {
-    position: absolute;
-    bottom: -60px;
-    right: 13.332px;
-    z-index: -1;
-
   }
 }
 
 .cta-section-inner {
-  background-color: rgb(var(--primary-color));
+  background-color: rgb(var(--mostly-black));
   border-radius: 28px;
   display: flex;
   align-items: center;
   gap: 80px;
+  padding: 100px 80px;
+  position: relative;
 }
 
 /*----------------------------------------------
@@ -8004,13 +8314,11 @@ Checkout section end
 .blog-section {
   position: relative;
   overflow: hidden;
-
-  .section-header {
-    max-width: 536px;
-    margin: 0 auto 80px;
-    text-align: center;
+.section-header{
+  .left-side{
+    max-width: 650px;
   }
-
+}
   .ellipse-blur-2 {
     top: 370px;
     bottom: auto;
@@ -8348,7 +8656,7 @@ Newsletter end
 ----------------------------------------------*/
 .footer-section {
   background-color: rgb(var(--mostly-black));
-
+padding: 112px 0 56px;
   .footer-widget {
     .widget-title {
       position: relative;
@@ -8371,21 +8679,21 @@ Newsletter end
     }
   }
 
-  .footer-hr {
-    margin-top: 80px;
-  }
-
   .description {
     color: rgb(var(--very-light-gray));
   }
 
   .contact-item-list {
     .item {
+      margin-bottom: 8px;
       .icon-area {
         background-color: var(--bg-color5);
-        color: rgb(var(--primary-color));
+        color: rgb(var(--secondary-color));
         border-radius: 50%;
         font-size: 16px;
+        width: 34px;
+        height: 34px;
+        background-color: #2C3731;
       }
     }
 
@@ -8429,6 +8737,15 @@ Newsletter end
   .contact-mail {
     margin-top: 80px;
   }
+  .social-box{
+    a{
+      padding: 8px 24px;
+      width: auto;
+      border-radius: 30px;
+      font-weight: 600;
+      color: rgb(var(--very-light-gray));
+    }
+  }
 }
 
 .contact-box {
@@ -8455,9 +8772,7 @@ Newsletter end
 // Responsive footer section start
 @media (max-width: 991px) {
   .footer-section {
-    .footer-hr {
-      margin-top: 40px;
-    }
+  
 
     .contact-mail {
       margin-top: 40px;
@@ -8506,8 +8821,6 @@ Footer section end
 ----------------------------------------------*/
 .copyright-section {
   text-align: center;
-  background-color: var(--bg-color6);
-  padding: 16px 24px;
   color: rgb(var(--very-light-gray));
 }
 

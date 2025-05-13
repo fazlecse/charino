@@ -24,14 +24,14 @@ $(document).ready(function () {
   // testimonial carousel start
   $(".testimonial-carousel").owlCarousel({
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     margin: 30,
     autoplayTimeout: 2000,
     // nav: false,
     // rtl: true,
     navText: [
-      "<i class='fa-regular fa-angle-left'></i>",
-      "<i class='fa-regular fa-angle-right'></i>",
+      "<i class='fa-regular fa-arrow-left-long'></i>",
+      "<i class='fa-regular fa-arrow-right-long'></i>",
     ],
     // rtl: true,
     responsive: {
@@ -58,9 +58,9 @@ $(document).ready(function () {
         dots: false,
       },
       1400: {
-        items: 1,
-        nav: false,
-        dots: true,
+        items: 3,
+        nav: true,
+        dots: false,
       },
     },
   });
