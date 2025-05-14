@@ -78,6 +78,7 @@ Typography
   --bg-color6: #0D1812;
   --bg-color7: #1E2821;
   --bg-color8: #F3FBF7;
+  --bg-color9: #1F2A24;
   --border-color1: #F5F5F5;
   --border-color2: #ECEBEB;
   --border-color3: rgba(255, 255, 255, 0.06);
@@ -2321,6 +2322,79 @@ Offcanvas end
   }
 }
 
+.cmn-btn5 {
+  background-color: rgb(var(--very-light-gray));
+  padding: 0 20px;
+  transition: var(--transition);
+  font-size: 18px;
+  color: rgb(var(--mostly-black));
+  display: inline-flex;
+  justify-content: center;
+  text-transform: capitalize;
+  gap: 5px;
+  border-radius: 8px;
+  font-weight: 700;
+
+  &:hover {
+    color: rgb(var(--mostly-black));
+
+    .btn-wrapper {
+      .main-text {
+        transform: translateY(-130%) translateZ(0);
+      }
+
+      .hover-text {
+        transform: translateY(0) translateZ(0);
+      }
+    }
+  }
+
+  .btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    pointer-events: none;
+    gap: 8px;
+    height: 58px;
+
+    .btn-single {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      pointer-events: none;
+      gap: 8px;
+      height: 58px;
+    }
+
+    .main-text {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: 0.5s;
+    }
+
+    .hover-text {
+      position: absolute;
+      left: 0;
+      transform: translateY(130%) translateZ(0);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: 0.5s;
+    }
+  }
+}
+
+.rtl {
+  .cmn-btn4 {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 
 .login-btn {
   display: flex;
@@ -2716,8 +2790,8 @@ Cmn tab2 end
 .video-play-btn {
   position: absolute;
   top: 50%;
-  left: calc(100% - 25px);
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 
   &::after {
@@ -2727,7 +2801,7 @@ Cmn tab2 end
     left: 0;
     width: 100%;
     height: 100%;
-    color: rgb(var(--primary-color));
+    color: rgb(var(--secondary-color));
     border-radius: 50%;
     -webkit-box-shadow: 0 0 0 0 currentColor;
     box-shadow: 0 0 0 0 currentColor;
@@ -2739,10 +2813,10 @@ Cmn tab2 end
 
   i {
     color: rgb(var(--white));
-    background: rgb(var(--primary-color));
-    height: 45px;
-    width: 45px;
-    font-size: 14px;
+    background: rgb(var(--secondary-color));
+    height: 56px;
+    width: 56px;
+    font-size: 26px;
     transition: var(--transition);
     border-radius: 50%;
     display: inline-flex;
@@ -2910,7 +2984,7 @@ hr.divider:after {
   overflow-y: auto;
   border-radius: 5px;
   padding: 8px;
-  background: var(--bg-color4);
+  background: var(--bg-color1);
   border-color: var(--border-color1);
 
   .dropdown-item {
@@ -2919,7 +2993,7 @@ hr.divider:after {
     transition: var(--transition);
     font-size: 16px;
     font-family: "Roboto", sans-serif;
-    margin-bottom: 5px;
+
     text-transform: capitalize;
     font-weight: 500;
     display: flex;
@@ -2928,8 +3002,11 @@ hr.divider:after {
     white-space: wrap;
 
     &:hover {
-      background: rgb(var(--primary-color));
-      color: rgb(var(--white));
+      color: rgb(var(--primary-color));
+    }
+
+    &.item:not(:last-child) {
+      margin-bottom: 5px;
     }
   }
 }
@@ -5533,9 +5610,7 @@ Cmn table end
 .custom-dropdown {
   .nav-link {
     i {
-      font-size: 14px;
       transition: 0.3s;
-      color: rgb(var(--heading-color));
     }
   }
 
@@ -5544,19 +5619,36 @@ Cmn table end
     padding: 4px;
     overflow: auto;
     margin-top: 0;
+    border-radius: 10px;
+    border-bottom: 3px solid rgb(var(--primary-color));
 
     .dropdown-item {
       padding: 8px 20px;
       transition: var(--transition);
-      font-size: 14px;
+      font-size: 16px;
       font-family: var(--heading-font);
       text-transform: capitalize;
-      font-weight: 400;
+      font-weight: 600;
       border-radius: 0;
+      align-items: center;
+      gap: 5px;
 
       &:hover {
-        background: rgb(var(--primary-color));
+        background: rgb(var(--bg-color1));
         color: rgb(var(--primary-color)) !important;
+
+        .hyphen {
+          width: 20px;
+        }
+      }
+
+      .hyphen {
+        background-color: rgb(var(--primary-color));
+        border-radius: 10px;
+        width: 20px;
+        width: 0;
+        height: 3px;
+        transition: var(--transition);
       }
     }
 
@@ -5565,10 +5657,10 @@ Cmn table end
     }
 
     li:not(:last-child) {
-      border-bottom: 1px solid var(--border-color1);
+      margin-bottom: 5px;
 
       .dropdown-item {
-        margin-bottom: 5px;
+        border-bottom: 1px solid var(--border-color1);
       }
     }
   }
@@ -6384,7 +6476,7 @@ Padding bottom end
 01. Nav section start
 ----------------------------------------------*/
 .navbar.active {
-  background-color: rgb(var(--white));
+  background-color: var(--bg-color8);
   z-index: 999;
 
   .navbar-nav {
@@ -6418,8 +6510,9 @@ Padding bottom end
 .navbar {
   padding: 10px 0;
   z-index: 999;
-  overflow: hidden;
   background-color: var(--bg-color8);
+
+
 
   .container {
     position: relative;
@@ -6543,11 +6636,34 @@ Padding bottom end
   display: flex;
   align-items: center;
   flex-grow: 1;
-  background-image: url(../img/header/nav-bg.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   padding: 10px 80px 10px 0;
-  right: -80px;
+  margin-left: 30px;
+  background-color: rgb(var(--secondary-color));
+  border-radius: 30px;
+
+  &::before {
+    content: "";
+    width: 46px;
+    height: 38px;
+    border-radius: 17.5px;
+    background-color: var(--bg-color8);
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    width: 46px;
+    height: 38px;
+    border-radius: 17.5px;
+    background-color: var(--bg-color8);
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 // Nav responsive start
@@ -6624,7 +6740,48 @@ Padding bottom end
 
 // Rtl nav end
 /*----------------------------------------------
-Nav end
+Nav section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Nav section2 start
+----------------------------------------------*/
+.navbar {
+  &.two {
+    padding: 20px;
+    background-color: rgb(var(--mostly-black));
+
+    .navbar-nav {
+      .nav-link {
+        color: rgb(var(--white));
+
+        &.active {
+          color: rgb(var(--secondary-color));
+        }
+
+        &:hover {
+          color: rgb(var(--secondary-color));
+        }
+      }
+    }
+
+    .nav-search-icon {
+      background-color: var(--bg-color3);
+      color: rgb(var(--heading-color));
+
+      &:hover {
+        color: rgb(var(--heading-color)) !important;
+      }
+    }
+
+    .cmn-btn2 {
+      background-color: rgb(var(--secondary-color));
+    }
+  }
+}
+
+/*----------------------------------------------
+Nav section2 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -6772,78 +6929,50 @@ Bottom Mobile, Tab nav end
 ----------------------------------------------*/
 .hero-section2 {
   position: relative;
-  overflow: hidden;
+  background: linear-gradient(270deg, rgba(19, 34, 27, 0.40) 0.24%, #13221B 95.06%);
 
-  &::after {
-    content: "";
-    background-color: rgb(var(--mostly-black));
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: calc(50% - -108px);
+  .background-img {
     position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
-  .ellipse-blur-1 {
-    top: 82px;
-    left: 43px;
+  .section-subtitle {
+    color: rgb(var(--very-light-gray));
+  }
+
+  h1 {
+    color: rgb(var(--white));
+  }
+
+  p {
+    color: rgb(var(--very-light-gray));
   }
 
   .left-side {
-    max-width: 698px;
-  }
-
-  .right-side {
+    z-index: 0;
     position: relative;
+    max-width: 682px;
+    padding: 160px 0;
+  }
 
-    .img-box {
-      max-width: 555px;
-      position: relative;
-
-      img {
-        border-radius: 20px;
-      }
-    }
-
-    .arrow {
-      position: absolute;
-      left: -54px;
-      bottom: -2px;
+  .section-subtitle {
+    .text-box {
+      color: rgb(var(--secondary-color));
     }
   }
+
 }
 
 .hero-section2-inner {
   display: flex;
-  align-items: center;
-  gap: 80px;
-
-}
-
-.hero2-carousel {
-  .owl-nav.disabled+.owl-dots {
-    position: absolute;
-    right: -54px;
-    display: flex;
-    flex-direction: column;
-    top: 50%;
-    transform: translateY(-50%);
-
-    .owl-dot span {
-      width: 14px;
-      height: 14px;
-      background-color: transparent;
-      border: 1px solid #E9E9E9;
-    }
-
-  }
-
-  .owl-dots .owl-dot.active span,
-  .owl-theme .owl-dots span {
-    background-color: rgb(var(--primary-color)) !important;
-    border-color: rgb(var(--primary-color)) !important;
-  }
-
+  gap: 32px;
 }
 
 /*----------------------------------------------
@@ -6853,7 +6982,6 @@ Bottom Mobile, Tab nav end
 /*----------------------------------------------
 About section start
 ----------------------------------------------*/
-
 .about-img-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -6887,6 +7015,70 @@ About section start
 
 /*----------------------------------------------
 About section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+About section2 start
+----------------------------------------------*/
+.about-section2 {
+  background-image: url(../img/about2/about-background-bg.png);
+  background-size: cover;
+
+  .about-list-container {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .right-side {
+    height: 610px;
+    position: relative;
+
+    .img-box {
+      width: 490px;
+
+      img {
+        border-radius: 20px;
+      }
+    }
+
+    .img-box-sm {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 368px;
+
+      img {
+        border-radius: 205px 205px 0 0;
+      }
+    }
+
+    .experience {
+      position: absolute;
+      right: 0;
+      top: 20px;
+      color: rgb(var(--white));
+      background-color: rgb(var(--mostly-black));
+      padding: 16px;
+      border-radius: 22px;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 300px;
+
+      .year {
+        color: rgb(var(--primary-color));
+        font-size: 56px;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------
+About section2 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -6957,87 +7149,7 @@ About section3 start
 }
 
 /*----------------------------------------------
-About section2 end
-----------------------------------------------*/
-
-/*----------------------------------------------
-About section2 start
-----------------------------------------------*/
-.about-section2 {
-  .right-side {
-    height: 575px;
-    position: relative;
-
-    .img-box {
-      margin-right: 160px;
-
-      img {
-        border-radius: 20px;
-      }
-    }
-
-    .img-box-sm {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-
-      img {
-        border-radius: 20px;
-      }
-    }
-
-    .arrow {
-      position: absolute;
-      right: 0;
-      top: 90px;
-    }
-  }
-
-  .admin-box {
-    .admin-img-box {
-      width: 72px;
-      height: 72px;
-    }
-
-    .admin-text-box {
-      .admin-title {
-        font-size: 20px;
-      }
-    }
-  }
-
-}
-
-.about-feature-box {
-  border: 1px solid rgb(var(--primary-color), 0.5);
-  border-radius: 20px;
-  padding: 20px 16px;
-  text-align: center;
-
-  .icon-box {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 1px dashed rgb(var(--primary-color), 0.5);
-    color: rgb(var(--primary-color));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    margin: 0 auto;
-  }
-
-  .text-box {
-    margin-top: 16px;
-
-    .title {
-      font-size: 18px;
-    }
-  }
-}
-
-/*----------------------------------------------
-About section2 end
+About section3 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -7205,6 +7317,14 @@ Feature section end
 /*----------------------------------------------
 00. Cause Category section start
 ----------------------------------------------*/
+.cause-category-section {
+  .section-header {
+    .left-side {
+      max-width: 732px;
+    }
+  }
+}
+
 .admin-box {
   display: flex;
   align-items: center;
@@ -7213,6 +7333,7 @@ Feature section end
   .admin-img-box {
     width: 32px;
     height: 32px;
+
 
     img {
       border-radius: 50%;
@@ -7229,7 +7350,7 @@ Feature section end
 .causes-box {
   border: 1px solid rgb(var(--primary-color), 0.5);
   border-radius: 22px;
-  display: flex;
+
   gap: 24px;
 
   &:hover {
@@ -7243,6 +7364,8 @@ Feature section end
   }
 
   &.one {
+    display: flex;
+
     .img-box {
       width: 335px;
       min-width: 335px;
@@ -7253,6 +7376,7 @@ Feature section end
       }
     }
   }
+
 
   .img-box {
     position: relative;
@@ -7323,123 +7447,34 @@ Feature section end
   color: rgb(var(--heading-color));
 }
 
-.section-header {
-  .left-side {
-    max-width: 732px;
-  }
-}
+
 
 /*----------------------------------------------
 00. Cause Category section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-00. Cause Category section3 start
-----------------------------------------------*/
-.admin-box {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  .admin-img-box {
-    width: 32px;
-    height: 32px;
-
-    img {
-      border-radius: 50%;
-    }
-  }
-
-  .admin-text-box {
-    .title {
-      font-size: 16px;
-    }
-  }
-}
-
-.causes-box3 {
-  border: 1px solid rgb(var(--primary-color), 0.5);
-  border-radius: 20px;
-
-  .img-box {
-    img {
-      border-radius: 20px 20px 0 0;
-    }
-  }
-
-  .text-box {
-    padding: 24px 16px;
-
-    .title {
-      margin-top: 32px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      line-clamp: 1;
-    }
-
-  }
-
-  .custom-progress {
-    .progress {
-      height: 4px;
-    }
-  }
-
-}
-
-.funding-stats {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  color: rgb(var(--heading-color));
-}
-
-/*----------------------------------------------
-00. Cause Category section3 end
-----------------------------------------------*/
-.cause-category-section2 {
-  background-color: var(--bg-color2);
-}
-
-.causes-box2 {
-  border: 1px solid rgb(var(--primary-color), 0.5);
-  border-radius: 20px;
-
-  .img-box {
-    img {
-      border-radius: 20px 20px 0 0;
-    }
-  }
-
-  .text-box {
-    padding: 24px 16px;
-
-    .title {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      line-clamp: 1;
-      font-size: 20px;
-    }
-
-  }
-}
-
-.cause-carousel {
-  .owl-nav {
-    justify-content: start;
-    margin-top: 48px;
-  }
-}
-
-/*----------------------------------------------
 00. Cause Category section2 start
 ----------------------------------------------*/
+
+
+.progress-box {
+  .circle {
+    position: relative;
+    width: 48px;
+    margin-bottom: 0;
+
+    .percent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 400;
+      color: var(--heading-color);
+      font-size: 13px;
+    }
+  }
+}
 
 /*----------------------------------------------
 Cause Category section2 end
@@ -7449,19 +7484,38 @@ Cause Category section2 end
 00. Donation section section start
 ----------------------------------------------*/
 .donation-section {
-  background-color: var(--bg-color2);
+  background-color: rgb(var(--mostly-black));
 
   .section-header {
     max-width: 650px;
     text-align: center;
     margin: 0 auto 80px;
   }
+
+  .section-subtitle {
+    color: rgb(var(--very-light-gray));
+  }
+
+  h2 {
+    color: rgb(var(--white));
+  }
+
+  p {
+    color: rgb(var(--very-light-gray));
+  }
+
 }
 
 .donation-box {
   border: 1px solid rgb(var(--primary-color), 0.5);
   padding: 24px;
   border-radius: 20px;
+  color: rgb(var(--very-light-gray));
+  background-color: var(--bg-color9);
+
+  h5 {
+    color: rgb(var(--very-light-gray));
+  }
 
   .name-img-box {
     width: 72px;
@@ -7471,7 +7525,7 @@ Cause Category section2 end
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(var(--white));
+
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
@@ -7486,6 +7540,22 @@ Cause Category section2 end
 
     .donation-time {
       color: rgb(var(--secondary-color));
+      font-weight: 700;
+    }
+  }
+}
+
+.donation-carousel {
+
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next {
+    background-color: rgb(var(--secondary-color)) !important;
+    border-color: rgb(var(--secondary-color)) !important;
+    color: rgb(var(--heading-color)) !important;
+
+    &:hover {
+      background-color: rgb(var(--white)) !important;
+      border-color: rgb(var(--white)) !important;
     }
   }
 }
@@ -7510,6 +7580,12 @@ Donation section section end
 
   p {
     color: rgb(var(--very-light-gray));
+  }
+
+  .section-header {
+    .left-side {
+      max-width: 650px;
+    }
   }
 }
 
@@ -7563,9 +7639,21 @@ Donation section section end
   }
 }
 
+.donate-btn {
+  display: inline-flex;
+  font-size: 18px;
+  color: rgb(var(--secondary-color));
+  text-decoration: underline;
+
+  &:hover {
+    color: rgb(var(--white));
+  }
+}
+
 /*----------------------------------------------
 Event section end
 ----------------------------------------------*/
+
 .event-box2 {
 
   overflow: hidden;
@@ -7714,6 +7802,71 @@ Event section2 end
 
   &:hover {
     color: rgb(var(--white));
+  }
+}
+
+/*----------------------------------------------
+Team section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Team section end
+----------------------------------------------*/
+.team-box {
+  &.two {
+    overflow: hidden;
+
+    &:hover {
+      .img-box {
+        &::after {
+          transform: scaleY(1);
+
+        }
+      }
+
+      .social-box {
+        transform: scale(1);
+      }
+    }
+
+    .img-box {
+      &::after {
+        background-color: rgb(var(--black), 0.6);
+        content: "";
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        position: absolute;
+        z-index: 0;
+        transition: var(--transition);
+      }
+    }
+
+    .social-container-tow {
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .social-box {
+      gap: 10px;
+      transform: scale(0);
+      transition: var(--transition);
+
+      a {
+        background-color: var(--bg-color1);
+      }
+    }
   }
 }
 
@@ -8314,11 +8467,13 @@ Checkout section end
 .blog-section {
   position: relative;
   overflow: hidden;
-.section-header{
-  .left-side{
-    max-width: 650px;
+
+  .section-header {
+    .left-side {
+      max-width: 650px;
+    }
   }
-}
+
   .ellipse-blur-2 {
     top: 370px;
     bottom: auto;
@@ -8656,7 +8811,8 @@ Newsletter end
 ----------------------------------------------*/
 .footer-section {
   background-color: rgb(var(--mostly-black));
-padding: 112px 0 56px;
+  padding: 112px 0 56px;
+
   .footer-widget {
     .widget-title {
       position: relative;
@@ -8686,6 +8842,7 @@ padding: 112px 0 56px;
   .contact-item-list {
     .item {
       margin-bottom: 8px;
+
       .icon-area {
         background-color: var(--bg-color5);
         color: rgb(var(--secondary-color));
@@ -8737,8 +8894,9 @@ padding: 112px 0 56px;
   .contact-mail {
     margin-top: 80px;
   }
-  .social-box{
-    a{
+
+  .social-box {
+    a {
       padding: 8px 24px;
       width: auto;
       border-radius: 30px;
@@ -8772,7 +8930,7 @@ padding: 112px 0 56px;
 // Responsive footer section start
 @media (max-width: 991px) {
   .footer-section {
-  
+
 
     .contact-mail {
       margin-top: 40px;

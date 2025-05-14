@@ -69,14 +69,14 @@ $(document).ready(function () {
   // donation carousel start
   $(".donation-carousel").owlCarousel({
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     margin: 30,
     autoplayTimeout: 2000,
     // nav: false,
     // rtl: true,
     navText: [
-      "<i class='fa-regular fa-angle-left'></i>",
-      "<i class='fa-regular fa-angle-right'></i>",
+      "<i class='fa-regular fa-arrow-left-long'></i>",
+      "<i class='fa-regular fa-arrow-right-long'></i>",
     ],
     // rtl: true,
     responsive: {
@@ -326,7 +326,59 @@ $(document).ready(function () {
     $(".nice-select").niceSelect();
   }
   // Nice select end
+  // Circle progress start
+  if ($(".circle").length) {
+    $(".first.circle")
+      .circleProgress({
+        value: 0.7,
+        size: 48,
+        fill: {
+          gradient: ["#00715D"],
+        },
+      })
+      .on("circle-animation-progress", function (event, progress) {
+        $(this)
+          .find("span")
+          .html(Math.round(70 * progress) + "<i>%</i>");
+        $(this).find("span").addClass("percent");
+      });
+  }
+  if ($(".circle").length) {
+    $(".second.circle")
+      .circleProgress({
+        value: 0.8,
+        size: 48,
+        fill: {
+          gradient: ["#00715D"],
+        },
+      })
+      .on("circle-animation-progress", function (event, progress) {
+        $(this)
+          .find("span")
+          .html(Math.round(80 * progress) + "<i>%</i>");
+        $(this).find("span").addClass("percent");
+      });
+  }
+  if ($(".circle").length) {
+    $(".three.circle")
+      .circleProgress({
+        value: 0.6,
+        size: 48,
+        fill: {
+          gradient: ["#00715D"],
+        },
+      })
+      .on("circle-animation-progress", function (event, progress) {
+        $(this)
+          .find("span")
+          .html(Math.round(60 * progress) + "<i>%</i>");
+        $(this).find("span").addClass("percent");
+      });
+  }
+
+  // Circle progress start
 });
+
 // Fancybox carousel section start
 if ($(".fancybox-carousel-section").length) {
   // Initialise Carousel
