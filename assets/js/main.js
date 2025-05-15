@@ -66,6 +66,51 @@ $(document).ready(function () {
   });
   // testimonial carousel end
 
+  // testimonial carousel2 start
+  $(".testimonial-carousel2").owlCarousel({
+    loop: true,
+    // autoplay: true,
+    margin: 30,
+    autoplayTimeout: 2000,
+    // nav: false,
+    // rtl: true,
+    navText: [
+      "<i class='fa-regular fa-angle-left'></i>",
+      "<i class='fa-regular fa-angle-right'></i>",
+    ],
+    // rtl: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+        dots: false,
+        dotsEach: 3,
+      },
+      375: {
+        items: 2,
+        nav: true,
+        dots: false,
+        dotsEach: 2,
+      },
+      768: {
+        items: 3,
+        nav: true,
+        dots: false,
+      },
+      992: {
+        items: 4,
+        nav: true,
+        dots: false,
+      },
+      1400: {
+        items: 1,
+        nav: false,
+        dots: true,
+      },
+    },
+  });
+  // testimonial carousel2 end
+
   // donation carousel start
   $(".donation-carousel").owlCarousel({
     loop: true,
@@ -111,45 +156,50 @@ $(document).ready(function () {
   });
   // donation carousel end
 
-  // hero2 carousel start
-  $(".hero2-carousel").owlCarousel({
+  // donation carousel start
+  $(".hero-donation-carousel").owlCarousel({
     loop: true,
-    autoplay: true,
-    margin: 0,
+    // autoplay: true,
+    margin: 30,
     autoplayTimeout: 2000,
     // nav: false,
     // rtl: true,
     navText: [
-      "<i class='fa-regular fa-angle-left'></i>",
-      "<i class='fa-regular fa-angle-right'></i>",
+      "<i class='fa-regular fa-arrow-left-long'></i>",
+      "<i class='fa-regular fa-arrow-right-long'></i>",
     ],
     // rtl: true,
     responsive: {
       0: {
         items: 1,
-        nav: false,
-        dots: true,
+        nav: true,
+        dots: false,
         dotsEach: 3,
       },
       375: {
         items: 1,
-        nav: false,
-        dots: true,
+        nav: true,
+        dots: false,
         dotsEach: 2,
       },
       768: {
         items: 1,
-        nav: false,
-        dots: true,
+        nav: true,
+        dots: false,
       },
       992: {
         items: 1,
-        nav: false,
+        nav: true,
+        dots: false,
+      },
+      1400: {
+        items: 1,
+        nav: true,
         dots: true,
       },
     },
   });
-  // hero2 carousel end
+  // donation carousel end
 
   // case carousel start
   $(".cause-carousel").owlCarousel({

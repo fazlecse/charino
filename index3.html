@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Charino</title>
+  <!-- Favicon link -->
+  <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon" />
+  <!-- Fontawesome6 Css link -->
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <!-- Bootstrap5 Css link -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <!-- Owl carousel Css link -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+  <!-- select2 Css link -->
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <!-- swiper Css link -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <!-- Nice select Css-link -->
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
+  <!-- intlTelInput Css link -->
+  <link rel="stylesheet" href="assets/css/intlTelInput.min.css" />
+  <!-- fancybox css link -->
+  <link rel="stylesheet" href="assets/css/fancybox.css">
+  <!-- Style Css link -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="">
+
+  <!-- Nav section start -->
+  <nav class="navbar three navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="digiGoods" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <i class="fa-light fa-list"></i>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+              alt="digiGoods" /></a>
+
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="fa-light fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body align-items-center justify-content-between">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown custom-dropdown">
+              <a class="nav-link active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Home
+                <span><i class="fa-regular fa-angle-down"></i></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html"><span class="hyphen"></span> Home One</a></li>
+                <li><a class="dropdown-item" href="index2.html"><span class="hyphen"></span> Home Two</a></li>
+                <li><a class="dropdown-item" href="index3.html"><span class="hyphen"></span> Home Three</a></li>
+                <li><a class="dropdown-item" href="index4.html"><span class="hyphen"></span> Home Four</a></li>
+                <li><a class="dropdown-item" href="index5.html"><span class="hyphen"></span> Home Five</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="causes.html">Causes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="event.html">Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Pages.html">Page’s</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-right">
+        <ul class="custom-nav">
+          <li class="nav-item">
+            <ul class="social-box">
+              <li>
+                <a href="https://facebook.com" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://instagram.com" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link p-0">
+              <div class="cmn-btn4">
+                <div class="btn-wrapper">
+                  <div class="main-text btn-single">Donate Now</div>
+                  <div class="hover-text btn-single">Donate Now</div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item d-none d-sm-block">
+            <a href="" class="nav-link nav-search-icon">
+              <i class="fa-regular fa-magnifying-glass"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Nav section end -->
+
+  <!-- Bottom Mobile Tab nav section start -->
+  <ul class="nav bottom-nav fixed-bottom d-lg-none">
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+        href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active"><i class="fa-regular fa-house"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#search-modal"><i
+          class="fa-light fa-magnifying-glass"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+    </li>
+  </ul>
+  <!-- Bottom Mobile Tab nav section end -->
+
+  <!-- Hero section2 start -->
+  <div class="hero-section3">
+    <div class="container">
+      <div class="hero-section3-inner">
+        <div class="left-side">
+          <h1>Making the World Brighter with Care</h1>
+          <p class="description mt-25">
+            Your generosity fuels real change. Together, we bring hope, healing, and opportunity to those who need it
+            most. Through compassion and unity, we empower individuals and communities to rise, thrive, and build
+            brighter futures.
+          </p>
+          <div class="d-flex gap-4 mt-45">
+            <a data-fancybox href="https://www.youtube.com/watch?v=4whbcUpfoN4" class="cmn-btn4">
+              <div class="btn-wrapper">
+                <div class="main-text btn-single">
+                  <i class="fa-solid fa-circle-play"></i>
+                  Watch a Video
+                </div>
+                <div class="hover-text btn-single">
+                  <i class="fa-solid fa-circle-play"></i>
+                  Watch a Video
+                </div>
+              </div>
+            </a>
+            <div class="avater-group-box">
+              <div class="img-box">
+                <img src="./assets/img/avater/avater.png" alt="">
+                <img src="./assets/img/avater/avater2.png" alt="">
+                <img src="./assets/img/avater/avater3.png" alt="">
+                <img src="./assets/img/avater/avater4.png" alt="">
+              </div>
+              <div class="text-box">200+ Client</div>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="owl-carousel owl-theme hero-donation-carousel">
+            <div class="item">
+              <div class="hero-donation-box">
+                <div class="img-box">
+                  <img src="./assets/img/hero3/donation-img.png" alt="">
+                </div>
+                <div class="text-box">
+                  <div class="fw-bold">Donation <span class="highlight-secondary">$ 17005 - $24007</span></div>
+                  <h3 class="title mt-15">Healing Lives Spreading Hope</h3>
+                  <a href="" class="cmn-btn4 mt-10">
+                    <div class="btn-wrapper">
+                      <div class="main-text btn-single">Donate Now <i class="fa-solid fa-circle-arrow-right"></i>
+                      </div>
+                      <div class="hover-text btn-single">Donate Now <i class="fa-solid fa-circle-arrow-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="hero-donation-box">
+                <div class="img-box">
+                  <img src="./assets/img/hero3/donation-img.png" alt="">
+                </div>
+                <div class="text-box">
+                  <div class="fw-bold">Donation <span class="highlight-secondary">$ 17005 - $24007</span></div>
+                  <h3 class="title mt-15">Healing Lives Spreading Hope</h3>
+                  <a href="" class="cmn-btn4 mt-10">
+                    <div class="btn-wrapper">
+                      <div class="main-text btn-single">Donate Now <i class="fa-solid fa-circle-arrow-right"></i>
+                      </div>
+                      <div class="hover-text btn-single">Donate Now <i class="fa-solid fa-circle-arrow-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="hero-donation-box">
+                <div class="img-box">
+                  <img src="./assets/img/hero3/donation-img.png" alt="">
+                </div>
+                <div class="text-box">
+                  <div class="fw-bold">Donation <span class="highlight-secondary">$ 17005 - $24007</span></div>
+                  <h3 class="title mt-15">Healing Lives Spreading Hope</h3>
+                  <a href="" class="cmn-btn4 mt-10">
+                    <div class="btn-wrapper">
+                      <div class="main-text btn-single">Donate Now <i class="fa-solid fa-circle-arrow-right"></i>
+                      </div>
+                      <div class="hover-text btn-single">Donate Now <i class="fa-solid fa-circle-arrow-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background-img">
+      <img src="./assets/img/hero3/hero-bg.png" alt="" />
+    </div>
+    <div class="shape">
+      <img src="./assets/img/hero3/shape2.png" alt="">
+    </div>
+    <div class="shape2"></div>
+    <div class="shape3"></div>
+  </div>
+  <!-- Hero section2 end -->
+
+  <!-- About section3 start -->
+  <section class="about-section3">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-6">
+          <div class="section-subtitle">
+            <div class="img-box">
+              <img src="./assets/img/section-subtitle/heart.svg" alt="" />
+            </div>
+            <div class="text-box">About Us</div>
+          </div>
+          <h2>Empowering Change Through Generosity</h2>
+          <p class="mt-20">
+            At the heart of our mission is a commitment to making the world a better place. Through the power of
+            community and generosity, we strive to create lasting change.
+          </p>
+          <div class="custom-progress">
+            <div class="item">
+              <div class="top-text">
+                <span>Save Water</span>
+                <span>56%</span>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 56%;"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="top-text">
+                <span>Educetion</span>
+                <span>75%</span>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="79" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 79%;"></div>
+              </div>
+            </div>
+          </div>
+          <a href="" class="cmn-btn2 mt-30">
+            <div class="btn-wrapper">
+              <div class="main-text btn-single">About Us</div>
+              <div class="hover-text btn-single">About Us</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="right-side">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                <div class="img-box-big">
+                  <img src="./assets/img/about3/about-img-big.png" alt="" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="row g-4">
+                  <div class="col-12">
+                    <div class="about-review-box">
+                      <p>
+                        "Thanks to this charity, we were able to provide life-saving assistance to our community.
+                        immeasurable, and we’re proud to have partnered with them."
+                      </p>
+                      <div class="title">Sarah Lee</div>
+                      <div class="post">Designer</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="img-box-small">
+                      <img src="./assets/img/about3/about-img-small.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About section3 end -->
+
+  <!-- Feature section start -->
+  <section class="feature-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">
+          <div class="img-box">
+            <img src="./assets/img/section-subtitle/heart.svg" alt="" />
+          </div>
+          <div class="text-box">How We Help</div>
+        </div>
+        <h2>Empowering Change One Step at a Time</h2>
+        <p>Discover how our innovative initiatives and impactful programs are transforming lives and creating lasting
+          change.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <div class="feature-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-hands-holding-heart"></i>
+            </div>
+            <div class="text-box">
+              <h4>Become a Volunteer</h4>
+              <p class="mt-15">Join our mission to make a difference! As a volunteer, you'll play a vital role</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="feature-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-flower"></i>
+            </div>
+            <div class="text-box">
+              <h4>Shelter For Homeless</h4>
+              <p class="mt-15">Everyone deserves a safe place to call home. Our shelter program provides.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="feature-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-star-of-life"></i>
+            </div>
+            <div class="text-box">
+              <h4>Give Healthy Life</h4>
+              <p class="mt-15">Our programs focus on providing access to nutritious meals, medical.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="feature-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-box-heart"></i>
+            </div>
+            <div class="text-box">
+              <h4>Make World Happier</h4>
+              <p class="mt-15"> By spreading love, care, and support, we aim to bring happiness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-shape1">
+      <img src="./assets/img/feature/shape1.svg" alt="">
+    </div>
+    <div class="feature-shape2">
+      <img src="./assets/img/feature/shape2.svg" alt="">
+    </div>
+  </section>
+  <!-- Feature section end -->
+  <!-- Cause Category section start -->
+  <section class="cause-category-section">
+    <div class="container">
+      <div class="section-header d-flex align-items-center justify-content-between">
+        <div>
+          <div class="section-subtitle">
+            <div class="img-box">
+              <img src="./assets/img/section-subtitle/heart.svg" alt="" />
+            </div>
+            <div class="text-box">Causes Category</div>
+          </div>
+          <h2>Together for a Better Tomorrow</h2>
+          <p class="mt-25">Explore the causes we passionately support, from fighting hunger and providing shelter to
+            ensuring <br> education and healthcare</p>
+        </div>
+        <a href="" class="cmn-btn">
+          <div class="btn-wrapper">
+            <div class="main-text btn-single">View all <i class="fa-regular fa-circle-arrow-right"></i></div>
+            <div class="hover-text btn-single">View all <i class="fa-regular fa-circle-arrow-right"></i></div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="causes-box">
+            <div class="img-box">
+              <img src="./assets/img/causes3/photorealistic-kid-refugee-camp.png" alt="">
+            </div>
+            <div class="text-box">
+              <div class="admin-box">
+                <div class="admin-img-box">
+                  <img src="./assets/img/causes/admin.png" alt="">
+                </div>
+                <div class="admin-text-box">
+                  <div class="admin-title">
+                    by admin
+                  </div>
+                </div>
+              </div>
+              <h4><a href="" class="title mt-30">Empowering Minds Shaping Futures</a></h4>
+              <p class="mt-15">Education is the key to breaking the cycle of poverty and unlocking endless
+                opportunities.</p>
+              <div class="custom-progress">
+                <div class="item">
+                  <div class="top-text">
+                    <span>00</span>
+                    <span>50%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 50%;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <a href="" class="view-details-btn mt-25">View a Details</a>
+              </div>
+              <hr class="cmn-hr mt-30 mb-15">
+              <div class="funding-stats">
+                <span>Goals : $645870</span>
+                <span>Raised : $645870</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="causes-box">
+            <div class="img-box">
+              <img src="./assets/img/causes3/photorealistic-kid-refugee-camp2.png" alt="">
+            </div>
+            <div class="text-box">
+              <div class="admin-box">
+                <div class="admin-img-box">
+                  <img src="./assets/img/causes/admin2.png" alt="">
+                </div>
+                <div class="admin-text-box">
+                  <div class="admin-title">
+                    by admin
+                  </div>
+                </div>
+              </div>
+              <h4><a href="" class="title  mt-30">Empowering Minds Shaping Futures</a></h4>
+              <p class="mt-15">Education is the key to breaking the cycle of poverty and unlocking endless
+                opportunities.</p>
+              <div class="custom-progress">
+                <div class="item">
+                  <div class="top-text">
+                    <span>00</span>
+                    <span>50%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 50%;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <a href="" class="view-details-btn mt-25">View a Details</a>
+              </div>
+              <hr class="cmn-hr mt-30 mb-15">
+              <div class="funding-stats">
+                <span>Goals : $645870</span>
+                <span>Raised : $645870</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="causes-box">
+            <div class="img-box">
+              <img src="./assets/img/causes3/photorealistic-kid-refugee-camp3.png" alt="">
+            </div>
+            <div class="text-box">
+              <div class="admin-box">
+                <div class="admin-img-box">
+                  <img src="./assets/img/causes/admin3.png" alt="">
+                </div>
+                <div class="admin-text-box">
+                  <div class="admin-title">
+                    by admin
+                  </div>
+                </div>
+              </div>
+              <h4><a href="" class="title  mt-30">Empowering Minds Shaping Futures</a></h4>
+              <p class="mt-15">Education is the key to breaking the cycle of poverty and unlocking endless
+                opportunities.</p>
+              <div class="custom-progress">
+                <div class="item">
+                  <div class="top-text">
+                    <span>00</span>
+                    <span>50%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 50%;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <a href="" class="view-details-btn mt-25">View a Details</a>
+              </div>
+              <hr class="cmn-hr mt-30 mb-15">
+              <div class="funding-stats">
+                <span>Goals : $645870</span>
+                <span>Raised : $645870</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cause Category section end -->
+
+  <!-- Footer Section start -->
+  <section class="footer-section two">
+    <div class="container">
+      <div class="row gy-4 g-sm-5">
+        <div class="col-lg-6 col-sm-6">
+          <div class="footer-widget one">
+            <div class="widget-logo">
+              <a href="index.html"><img class="footer-logo" src="assets/img/logo/logo-white.png" alt="Charino" /></a>
+            </div>
+            <h2>Get started to up your Donation with Donation and Charity </h2>
+
+            <form class="newsletter-form">
+              <input type="text" class="form-control" placeholder="Enter your email">
+              <a href="" class="cmn-btn4">
+                <div class="btn-wrapper">
+                  <div class="main-text btn-single">Discover More <i class="fa-solid fa-circle-arrow-right"></i></div>
+                  <div class="hover-text btn-single">Discover More <i class="fa-solid fa-circle-arrow-right"></i></div>
+                </div>
+              </a>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6 ps-lg-5">
+          <div class="footer-widget">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul>
+              <li><a class="widget-link" href="about.html"><i class="fa-regular fa-angle-left"></i> About Us</a></li>
+              <li><a class="widget-link" href="movies.html"><i class="fa-regular fa-angle-left"></i> Our News </a></li>
+              <li><a class="widget-link" href="index.html"><i class="fa-regular fa-angle-left"></i> Our Complains</a>
+              </li>
+              <li><a class="widget-link" href="blog.html"> <i class="fa-regular fa-angle-left"></i> Privacy Policy</a>
+              </li>
+              <li> <a class="widget-link" href="contact.html"><i class="fa-regular fa-angle-left"></i> Contact Us </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6 pt-sm-0 pt-3">
+          <div class="footer-widget">
+            <h5 class="widget-title">Our Services</h5>
+            <ul>
+              <li>
+                <a class="widget-link" href="privacy-policy.html"><i class="fa-regular fa-angle-left"></i> Give a
+                  Donetion</a>
+              </li>
+              <li>
+                <a class="widget-link" href="privacy-policy.html"><i class="fa-regular fa-angle-left"></i> Education
+                  Support </a>
+              </li>
+              <li>
+                <a class="widget-link" href="privacy-policy.html"><i class="fa-regular fa-angle-left"></i> Food
+                  Support</a>
+              </li>
+              <li>
+                <a class="widget-link" href="privacy-policy.html"><i class="fa-regular fa-angle-left"></i> Health
+                  Support</a>
+              </li>
+              <li>
+                <a class="widget-link" href="privacy-policy.html"><i class="fa-regular fa-angle-left"></i> Our Event</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6 pt-sm-0 pt-3">
+          <div class="footer-widget">
+            <ul class="social-box mt-30">
+              <li>
+                <a href="https://facebook.com" aria-label="Facebook">
+                  &#9679; Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com" aria-label="Twitter">
+                  &#9679; Twitter
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com" aria-label="Linkedin">
+                  &#9679; Linkedin
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com" aria-label="Instagram">
+                  &#9679; Instagram
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shape"><img src="./assets/img/footer2/flags.png" alt=""></div>
+  </section>
+  <!-- Footer Section end -->
+
+  <!-- Modal section start -->
+  <!-- popup modal -->
+  <div class="modal fade popup-modal" id="popup-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="staticBackdropLabel">
+            Select Language
+          </h4>
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-light fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-12">
+              <div id="formModal">
+                <label class="form-label">Select language</label>
+                <select class="modal-select2-image" name="state">
+                  <option value="us">English</option>
+                  <option value="es">Spanish</option>
+                  <option value="bd">bangla</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer mt-10">
+          <a href="" class="cmn-btn">
+            <div class="btn-wrapper">
+              <div class="main-text btn-single">save</div>
+              <div class="hover-text btn-single">save</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search modal -->
+  <div class="modal fade search-modal" id="search-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="search-box2">
+          <input type="text" class="form-control" placeholder="Search...." />
+          <div class="search-btn">
+            <i class="far fa-search"></i>
+          </div>
+        </div>
+        <h5 class="mt-15">Most Popular</h5>
+        <div class="search-product-box-container mt-10">
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-1.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Heralds</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-2.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Rogue Mission</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-3.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Titan’s Wrath</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-4.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Split Bruce</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-5.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Red Horizon</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-6.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Dirilis Ertugrul</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-7.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Aşk ve Kader</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-8.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Karanlık Sırlar</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-9.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Ölümsüz Aşk</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-10.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">The Last Promise</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-11.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Silent Howl</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-12.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Demon’s Lullaby</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-13.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Black Veil</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-14.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Room 404</div>
+            </div>
+          </a>
+          <a href="product-details.html" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/product-img-15.png" alt="" />
+            </div>
+            <div class="text-box">
+              <div class="title mt-0">Blood Harvest</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal section end -->
+
+  <!-- Jquery Js link -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap Js link -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Owl carausel Js link -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <!-- select2 Js link -->
+  <script src="assets/js/select2.min.js"></script>
+  <!-- counterup Js link -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <!-- Swiper Js link -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Nice select Js link -->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <!-- intlTelInput Js link -->
+  <script src="assets/js/intlTelInput.min.js"></script>
+  <!-- fancybox Js link -->
+  <script src="assets/js/fancybox.umd.js"></script>
+  <!-- circle progressbar Js link -->
+  <script src="assets/js/circle-progress.min.js"></script>
+
+  <!-- Main Js link -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

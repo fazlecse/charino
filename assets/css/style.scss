@@ -46,7 +46,6 @@ Typography
 :root {
   --heading-font: "Nunito", sans-serif;
   --body-font: "Nunito", sans-serif;
-  --primary-color: 40, 189, 105;
   --primary-color: 0, 113, 93;
   --secondary-color: 254, 191, 16;
   --body-color: 51, 51, 51;
@@ -788,6 +787,7 @@ body::-webkit-scrollbar-thumb {
   width: 20px;
   height: 20px;
   background: #E9E9E9;
+  transition: all 0.5s ease-in-out;
 }
 
 .owl-theme .owl-dots .owl-dot.active span,
@@ -798,10 +798,6 @@ body::-webkit-scrollbar-thumb {
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots span {
   background: rgb(var(--primary-color));
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  transition: all 0.5s ease-in-out;
 }
 
 @media (max-width: 991px) {
@@ -1910,32 +1906,6 @@ Offcanvas end
 ----------------------------------------------*/
 
 // Shape area start
-// shape2 start
-.shape1 {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 10px;
-}
-
-// shape2 end
-// shape2 start
-.shape2 {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 0;
-}
-
-// shape2 end
-
-// shape3 start
-.shape3 {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  bottom: 0;
-}
 
 // shape3 end
 .ellipse-blur-1 {
@@ -5915,8 +5885,8 @@ Cmn table end
   .img-box {
     img {
       object-fit: cover;
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
 
       &:not(:first-child) {
@@ -5926,7 +5896,9 @@ Cmn table end
   }
 
   .text-box {
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 26px;
+    color: rgb(var(--white));
   }
 }
 
@@ -6774,14 +6746,66 @@ Nav section2 start
       }
     }
 
-    .cmn-btn2 {
-      background-color: rgb(var(--secondary-color));
-    }
   }
 }
 
 /*----------------------------------------------
 Nav section2 end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Nav section3 start
+----------------------------------------------*/
+.navbar {
+  &.three {
+    padding: 20px;
+    background-color: rgb(var(--white), 0.3);
+
+    &.active {
+      background-color: rgb(var(--mostly-black));
+    }
+
+    .navbar-nav {
+      .nav-link {
+        color: rgb(var(--white));
+
+        &.active {
+          color: rgb(var(--secondary-color));
+        }
+
+        &:hover {
+          color: rgb(var(--secondary-color));
+        }
+      }
+    }
+
+    .nav-search-icon {
+      background-color: var(--bg-color3);
+      color: rgb(var(--heading-color));
+
+      &:hover {
+        color: rgb(var(--heading-color)) !important;
+      }
+    }
+
+    .social-box {
+      margin-right: 56px;
+      gap: 16px;
+
+      a {
+        background-color: var(--bg-color3);
+        color: rgb(var(--heading-color));
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+      }
+    }
+
+  }
+}
+
+/*----------------------------------------------
+Nav section3 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -6980,6 +7004,176 @@ Bottom Mobile, Tab nav end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+00. Hero section3 start
+----------------------------------------------*/
+.hero-section3 {
+  background-image: linear-gradient(270deg, rgba(19, 34, 27, 0.30) 0.04%, #000 74.77%);
+  position: relative;
+  padding: 220px 0 140px;
+  overflow: hidden;
+
+  .background-img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h1 {
+    color: rgb(var(--white));
+  }
+
+  p {
+    color: rgb(var(--very-light-gray));
+  }
+
+  .left-side {
+    max-width: 811px;
+
+    .cmn-btn4 {
+      padding: 0 24px;
+
+      .btn-wrapper {
+        height: 80px;
+
+        .btn-single {
+          height: 80px;
+        }
+      }
+
+      i {
+        font-size: 46px;
+      }
+    }
+  }
+
+  .right-side {
+    position: relative;
+    right: -125px;
+    bottom: -60px;
+    max-width: 531px;
+  }
+
+  .description {
+    max-width: 694px;
+    border-left: 4px solid rgb(var(--secondary-color));
+    padding-left: 10px;
+    margin-left: 32px;
+  }
+
+  .shape {
+    position: absolute;
+    bottom: -265px;
+    right: -108px;
+    z-index: -1;
+  }
+
+  .shape2 {
+    width: 455px;
+    height: 200px;
+    background-color: rgb(var(--secondary-color));
+    border-top: 50px solid rgb(var(--primary-color));
+    position: absolute;
+    left: -170px;
+    bottom: -70px;
+    transform: rotate(44.506deg);
+  }
+
+  .shape3 {
+    width: 455px;
+    height: 200px;
+    background-color: rgb(var(--primary-color));
+    border-bottom: 50px solid rgb(var(--secondary-color));
+    position: absolute;
+    right: -170px;
+    top: -70px;
+    transform: rotate(44.506deg);
+  }
+}
+
+.hero-section3-inner {
+  display: flex;
+  align-items: end;
+  gap: 32px;
+  z-index: 1;
+  position: relative;
+}
+
+
+
+.hero-donation-box {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px;
+  border-radius: 15px;
+  background-color: rgba(7, 10, 8, 0.50);
+  color: rgb(var(--white));
+
+  .img-box {
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .text-box {
+    .title {
+      color: rgb(var(--white));
+    }
+  }
+}
+
+.hero-donation-carousel {
+  .owl-dots .owl-dot span {
+    width: 22px;
+    height: 9px;
+    border-radius: 41px;
+  }
+
+  .owl-dots .owl-dot.active span,
+  .owl-dots .owl-dot:hover span {
+    background-color: rgb(var(--secondary-color));
+  }
+
+  .owl-nav.disabled+.owl-dots {
+    text-align: center;
+  }
+
+  .owl-nav {
+    margin-top: 16px;
+  }
+
+  .owl-nav .owl-prev {
+    position: absolute;
+    top: calc(50% - 20px);
+    transform: translateY(-50%);
+    width: 40px;
+    left: -30px;
+  }
+
+  .owl-nav .owl-next {
+    position: absolute;
+    top: calc(50% - 20px);
+    transform: translateY(-50%);
+    width: 40px;
+    right: -30px;
+  }
+}
+
+/*----------------------------------------------
+Hero section3 end
+----------------------------------------------*/
+
+/*----------------------------------------------
 About section start
 ----------------------------------------------*/
 .about-img-container {
@@ -7139,7 +7333,7 @@ About section3 start
     margin-top: 16px;
     font-size: 20px;
     color: rgb(var(--mostly-black));
-    font-style: 600;
+    font-weight: 700;
   }
 
   .post {
@@ -7456,8 +7650,6 @@ Feature section end
 /*----------------------------------------------
 00. Cause Category section2 start
 ----------------------------------------------*/
-
-
 .progress-box {
   .circle {
     position: relative;
@@ -7478,6 +7670,14 @@ Feature section end
 
 /*----------------------------------------------
 Cause Category section2 end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Cause Category section3 start
+----------------------------------------------*/
+
+/*----------------------------------------------
+Cause Category section3 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -8158,6 +8358,49 @@ CTA section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+CTA section2 start
+----------------------------------------------*/
+.cta-section {
+  &.two {
+    background-color: var(--bg-color2);
+
+    .cta-section-inner {
+      padding: 0;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .left-side {
+      max-width: 634px;
+      padding: 103px 0 103px 80px;
+    }
+
+    .right-side .img-box {
+      position: absolute;
+      top: -100px;
+      bottom: -100px;
+      right: 0;
+
+      img {
+        mask-image: url(../img/cta2/photorealistic-kid-refugee-camp-bg.png);
+        --webkit-mask-image: url(../img/cta2/photorealistic-kid-refugee-camp-bg.png);
+        -webkit-mask-size: auto 100%;
+        mask-size: auto 100%;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: right;
+        mask-position: right;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------
+CTA section2 end
+----------------------------------------------*/
+
+/*----------------------------------------------
 00. Service section2 start
 ----------------------------------------------*/
 .service-section2 {
@@ -8499,6 +8742,9 @@ Checkout section end
 
 .blog-box {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
   &:hover {
     .img-box {
@@ -8518,14 +8764,12 @@ Checkout section end
       transition: var(--transition);
       transform: scale(1.05);
       width: 100%;
-      // height: 365px;
       object-fit: cover;
       aspect-ratio: 8/6;
     }
   }
 
   .text-box {
-    margin-top: 16px;
     padding: 24px;
     border: 1px solid rgb(var(--primary-color), 0.5);
     border-radius: 20px;
@@ -8680,6 +8924,28 @@ Blog section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+Blog section2 start
+----------------------------------------------*/
+.blog-box {
+  &.two {
+    flex-direction: row;
+
+    .img-box {
+      width: 326px;
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------
+Blog section2 end
+----------------------------------------------*/
+
+/*----------------------------------------------
 Blog details section start
 ----------------------------------------------*/
 .blog-details-section {
@@ -8753,9 +9019,9 @@ Product details section end
 
   .form-control {
     border-radius: 50px;
-    padding: 10px 50px 10px 10px;
+    padding: 16px 32px;
     border-color: #202B25;
-    height: 50px;
+    height: 58px;
     border-radius: 8px;
     background-color: #202B25;
     color: rgb(var(--very-light-gray));
@@ -8767,19 +9033,26 @@ Product details section end
 
   .subscribe-btn {
     transition: var(--transition);
-    background-color: rgb(var(--primary-color));
+    background-color: rgb(var(--secondary-color));
     border-radius: 8px;
-    color: rgb(var(--white));
+    color: rgb(var(--heading-color));
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
+    height: 58px;
     font-weight: 700;
+    gap: 5px;
+    white-space: nowrap;
 
     &:hover {
-      background-color: rgb(var(--primary-color), 0.8);
-      color: rgb(var(--white));
+      background-color: rgb(var(--secondary-color), 0.8);
+      color: rgb(var(--heading-color));
     }
+  }
+
+  .cmn-btn4 {
+    white-space: nowrap;
   }
 }
 
@@ -8972,6 +9245,43 @@ Newsletter end
 
 /*----------------------------------------------
 Footer section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Footer section2 start
+----------------------------------------------*/
+.footer-section {
+  &.two {
+    padding: 112px 0;
+    position: relative;
+  }
+
+  .shape {
+    position: absolute;
+    bottom: 0;
+    right: 364px;
+    right: 19%;
+  }
+}
+
+.footer-widget {
+  &.one {
+    text-align: center;
+
+    h2 {
+      color: rgb(var(--white));
+      font-size: 38px;
+    }
+
+    .newsletter-form {
+      max-width: 614px;
+      margin: 48px auto 0;
+    }
+  }
+}
+
+/*----------------------------------------------
+Footer section2 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
