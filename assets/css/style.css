@@ -74,6 +74,7 @@ Typography
   --bg-color6: #0D1812;
   --bg-color7: #1E2821;
   --bg-color8: #1F2A24;
+  --bg-color9: #28332D;
   --border-color1: #F5F5F5;
   --border-color2: #ECEBEB;
   --border-color3: rgba(255, 255, 255, 0.06);
@@ -2404,6 +2405,35 @@ section {
     font-size: 16px;
   }
 }
+.section-subtitle2 {
+  color: rgb(var(--mostly-black));
+  font-weight: 600;
+  position: relative;
+  margin: 0 115px;
+  display: inline-flex;
+  margin-bottom: 15px;
+}
+.section-subtitle2::before {
+  position: absolute;
+  content: "";
+  width: 95px;
+  height: 1px;
+  background-color: rgb(var(--secondary-color));
+  left: -115px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section-subtitle2::after {
+  position: absolute;
+  content: "";
+  width: 95px;
+  height: 1px;
+  background-color: rgb(var(--secondary-color));
+  right: -115px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .social-box {
   display: flex;
   flex-wrap: wrap;
@@ -5537,6 +5567,47 @@ Nav section3 start
 Nav section3 end
 ----------------------------------------------*/
 /*----------------------------------------------
+Nav section3 start
+----------------------------------------------*/
+.navbar.five {
+  padding: 20px;
+  background-color: rgb(var(--mostly-black));
+}
+.navbar.five.active {
+  background-color: rgb(var(--mostly-black));
+}
+.navbar.five .navbar-nav .nav-link {
+  color: rgb(var(--white));
+}
+.navbar.five .navbar-nav .nav-link.active {
+  color: rgb(var(--secondary-color));
+}
+.navbar.five .navbar-nav .nav-link:hover {
+  color: rgb(var(--secondary-color));
+}
+.navbar.five .nav-search-icon {
+  background-color: var(--bg-color3);
+  color: rgb(var(--heading-color));
+}
+.navbar.five .nav-search-icon:hover {
+  color: rgb(var(--heading-color)) !important;
+}
+.navbar.five .social-box {
+  margin-right: 56px;
+  gap: 16px;
+}
+.navbar.five .social-box a {
+  background-color: rgb(var(--secondary-color));
+  color: rgb(var(--heading-color));
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+}
+
+/*----------------------------------------------
+Nav section3 end
+----------------------------------------------*/
+/*----------------------------------------------
 02. Bottom Mobile, Tab nav section start
 ----------------------------------------------*/
 .bottom-nav {
@@ -5687,7 +5758,7 @@ Bottom Mobile, Tab nav end
   z-index: 0;
   position: relative;
   max-width: 682px;
-  padding: 160px 0;
+  padding: 157px 0;
 }
 .hero-section2 .section-subtitle .text-box {
   color: rgb(var(--secondary-color));
@@ -5696,6 +5767,7 @@ Bottom Mobile, Tab nav end
 .hero-section2-inner {
   display: flex;
   gap: 32px;
+  overflow: hidden;
 }
 
 /*----------------------------------------------
@@ -5911,6 +5983,75 @@ Hero section4 start
 
 /*----------------------------------------------
 Hero section4 end
+----------------------------------------------*/
+/*----------------------------------------------
+Hero section5 start
+----------------------------------------------*/
+.hero-section5 {
+  background-image: url(../img/hero5/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 112px 0;
+  z-index: 0;
+}
+.hero-section5 .left-side {
+  position: absolute;
+  width: 42%;
+  left: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+.hero-section5 .left-side .img-box {
+  height: 100%;
+}
+.hero-section5 .left-side .img-box img {
+  -webkit-mask-image: url(../img/hero5/hero-img-bg.png);
+          mask-image: url(../img/hero5/hero-img-bg.png);
+  -webkit-mask-size: auto 100%;
+  mask-size: auto 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: left;
+          mask-position: left;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-section5 .right-side {
+  width: 58%;
+}
+.hero-section5 .hero-title {
+  font-size: 60px;
+}
+.hero-section5 .left-hand-shape {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  z-index: -1;
+}
+.hero-section5 .middle-hand-shape {
+  position: absolute;
+  right: 4%;
+  bottom: 0;
+  z-index: -1;
+}
+.hero-section5 .right-hand-shape {
+  position: absolute;
+  right: 1%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero-section5-inner {
+  display: flex;
+  justify-content: end;
+}
+
+/*----------------------------------------------
+Hero section5 end
 ----------------------------------------------*/
 /*----------------------------------------------
 About section start
@@ -6998,6 +7139,7 @@ CTA section start
 .cta-section .right-side .img-box {
   position: absolute;
   bottom: 0;
+  right: 40px;
 }
 
 .cta-section-inner {
@@ -7122,6 +7264,81 @@ CTA section2 end
 
 /*----------------------------------------------
 Service section2 section end
+----------------------------------------------*/
+/*----------------------------------------------
+Service section3 section start
+----------------------------------------------*/
+.service-section3 {
+  background-color: rgb(var(--mostly-black));
+  z-index: 0;
+  position: relative;
+}
+.service-section3 .section-header {
+  max-width: 731px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+.service-section3 .section-subtitle {
+  color: rgb(var(--very-light-gray));
+}
+.service-section3 h2 {
+  color: rgb(var(--white));
+}
+.service-section3 p {
+  color: rgb(var(--very-light-gray));
+}
+.service-section3 .button-box {
+  margin-top: 80px;
+  position: relative;
+}
+.service-section3 .button-box .arrow-left,
+.service-section3 .button-box .arrow-right {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+.service-section3 .button-box .arrow-left {
+  left: 32%;
+}
+.service-section3 .button-box .arrow-right {
+  right: 32%;
+}
+
+.service-box3 {
+  padding: 44px 24px;
+  border-radius: 20px;
+  background-color: var(--bg-color9);
+  text-align: center;
+}
+.service-box3:hover .icon-box {
+  background-color: rgb(var(--white));
+  color: rgb(var(--primary-color));
+}
+.service-box3 .icon-box {
+  width: 56px;
+  height: 56px;
+  background-color: rgb(var(--secondary-color));
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: var(--transition);
+}
+.service-box3 .text-box {
+  margin-top: 24px;
+}
+.service-box3 .text-box .title {
+  color: rgb(var(--white));
+}
+
+.about-section2.three {
+  background-image: none;
+}
+
+/*----------------------------------------------
+Service section3 section end
 ----------------------------------------------*/
 /*----------------------------------------------
 See all products start
@@ -7713,8 +7930,6 @@ Footer section4 start
 }
 .footer-section.four .shape {
   right: 0px;
-  top: 0;
-  bottom: auto;
 }
 .footer-section.four .description {
   max-width: 421px;

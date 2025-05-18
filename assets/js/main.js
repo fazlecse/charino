@@ -204,7 +204,7 @@ $(document).ready(function () {
   // donation carousel start
   $(".hero-donation-carousel").owlCarousel({
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     margin: 30,
     autoplayTimeout: 2000,
     // nav: false,
@@ -510,8 +510,8 @@ $(document).ready(function () {
         $(this).find("span").addClass("percent");
       });
   }
-
   // Circle progress start
+  AOS.init();
 });
 
 // Fancybox carousel section start
