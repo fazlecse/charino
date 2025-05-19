@@ -24,7 +24,7 @@ $(document).ready(function () {
   // testimonial carousel start
   $(".testimonial-carousel").owlCarousel({
     loop: true,
-    autoplay: true,
+    // autoplay: true,
     margin: 30,
     autoplayTimeout: 2000,
     // nav: false,
@@ -42,18 +42,19 @@ $(document).ready(function () {
         dotsEach: 3,
       },
       375: {
-        items: 2,
+        items: 1,
         nav: true,
         dots: false,
         dotsEach: 2,
       },
       768: {
-        items: 3,
+        items: 2,
         nav: true,
         dots: false,
+        margin: 15,
       },
       992: {
-        items: 4,
+        items: 2,
         nav: true,
         dots: false,
       },
@@ -87,27 +88,22 @@ $(document).ready(function () {
         dotsEach: 3,
       },
       375: {
-        items: 2,
+        items: 1,
         nav: true,
         dots: false,
         dotsEach: 2,
       },
       768: {
-        items: 3,
+        items: 1,
         nav: true,
         dots: false,
       },
       992: {
-        items: 4,
+        items: 1,
         nav: true,
         dots: false,
       },
-      1400: {
-        items: 1,
-        nav: false,
-        dots: true,
-      },
-    },
+    }
   });
   // testimonial carousel2 end
 
