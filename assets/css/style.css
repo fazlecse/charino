@@ -215,13 +215,13 @@ h1 {
 
 @media (max-width: 991px) {
   h1 {
-    font-size: 36px;
+    font-size: 42px;
     line-height: 50px;
   }
 }
 @media (max-width: 460px) {
   h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 @media (max-width: 575px) {
@@ -237,7 +237,7 @@ h2 {
 
 @media (max-width: 991px) {
   h2 {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
 h3 {
@@ -248,7 +248,7 @@ h3 {
 
 @media (max-width: 991px) {
   h3 {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 h4 {
@@ -623,15 +623,16 @@ Breadcrumb start
   display: inline-flex;
   justify-content: center;
   margin-bottom: 0;
+  font-size: 18px;
 }
 .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   content: "\f105";
-  color: rgb(var(--heading-color));
+  color: rgb(var(--white));
   font-family: "Font Awesome 6 Pro";
   font-weight: 400;
 }
 .breadcrumb .breadcrumb-item.active {
-  color: rgb(var(--primary-color));
+  color: rgb(var(--white));
   text-transform: capitalize;
 }
 
@@ -2384,9 +2385,14 @@ section {
   padding: 120px 0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   section {
-    padding: 50px 0;
+    padding: 80px 0;
+  }
+}
+@media (max-width: 767px) {
+  section {
+    padding: 60px 0;
   }
 }
 .cmn-para-text {
@@ -5475,14 +5481,14 @@ Padding bottom end
     display: none !important;
   }
 }
-@media (min-width: 1400px) {
-  .navbar .navbar-nav {
-    margin-left: 150px;
-  }
-}
 @media (min-width: 1200px) {
   .navbar .navbar-nav {
     margin-left: 75px;
+  }
+}
+@media (min-width: 1400px) {
+  .navbar .navbar-nav {
+    margin-left: 150px;
   }
 }
 @media (max-width: 1199px) {
@@ -5574,7 +5580,7 @@ Nav section3 start
 ----------------------------------------------*/
 .navbar.three {
   padding: 20px;
-  background-color: rgb(var(--white), 0.3);
+  background-color: rgb(var(--white), 0.2);
 }
 .navbar.three.active {
   background-color: rgb(var(--mostly-black));
@@ -5596,8 +5602,8 @@ Nav section3 start
   color: rgb(var(--heading-color)) !important;
 }
 .navbar.three .social-box {
-  margin-right: 56px;
   gap: 16px;
+  display: none;
 }
 .navbar.three .social-box a {
   background-color: var(--bg-color3);
@@ -5607,6 +5613,17 @@ Nav section3 start
   height: 34px;
 }
 
+@media (min-width: 1400px) {
+  .navbar.three .social-box {
+    display: flex;
+    margin-right: 56px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar.three .navbar-nav {
+    margin-left: 0;
+  }
+}
 /*----------------------------------------------
 Nav section3 end
 ----------------------------------------------*/
@@ -5792,6 +5809,11 @@ Bottom Mobile, Tab nav end
     left: 52%;
   }
 }
+@media (max-width: 1199px) {
+  .hero-section {
+    padding: 100px 0;
+  }
+}
 @media (max-width: 991px) {
   .hero-section-inner {
     flex-direction: column;
@@ -5926,7 +5948,7 @@ Bottom Mobile, Tab nav end
   color: rgb(var(--very-light-gray));
 }
 .hero-section3 .left-side {
-  max-width: 811px;
+  width: 60%;
 }
 .hero-section3 .left-side .cmn-btn4 {
   padding: 0 24px;
@@ -5941,10 +5963,8 @@ Bottom Mobile, Tab nav end
   font-size: 46px;
 }
 .hero-section3 .right-side {
+  width: 40%;
   position: relative;
-  right: -125px;
-  bottom: -60px;
-  max-width: 531px;
 }
 .hero-section3 .description {
   max-width: 694px;
@@ -6008,6 +6028,9 @@ Bottom Mobile, Tab nav end
   color: rgb(var(--white));
 }
 
+.hero-donation-carousel {
+  padding: 0 15px;
+}
 .hero-donation-carousel .owl-dots .owl-dot span {
   width: 22px;
   height: 9px;
@@ -6028,16 +6051,78 @@ Bottom Mobile, Tab nav end
   top: calc(50% - 20px);
   transform: translateY(-50%);
   width: 40px;
-  left: -30px;
+  left: -5px;
 }
 .hero-donation-carousel .owl-nav .owl-next {
   position: absolute;
   top: calc(50% - 20px);
   transform: translateY(-50%);
   width: 40px;
-  right: -30px;
+  right: -5px;
 }
 
+@media (min-width: 1600px) {
+  .hero-section3 .right-side {
+    right: -125px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section3 .right-side {
+    bottom: -60px;
+  }
+}
+@media (max-width: 1399px) {
+  .hero-section3 .left-side {
+    width: 55%;
+  }
+  .hero-section3 .right-side {
+    width: 45%;
+  }
+}
+@media (max-width: 1199px) {
+  .hero-section3 {
+    padding: 200px 0 100px;
+  }
+  .hero-section3 .left-side {
+    width: 50%;
+  }
+  .hero-section3 .right-side {
+    width: 50%;
+  }
+}
+@media (max-width: 991px) {
+  .hero-section3 .left-side {
+    width: 100%;
+  }
+  .hero-section3 .right-side {
+    width: 100%;
+  }
+  .hero-section3-inner {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .hero-section3 {
+    padding: 160px 0 60px;
+  }
+  .hero-section3-inner {
+    flex-direction: column;
+  }
+}
+@media (max-width: 575px) {
+  .hero-section3 .description {
+    margin-left: 0;
+  }
+  .hero-donation-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-donation-box .img-box {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+  }
+}
 /*----------------------------------------------
 Hero section3 end
 ----------------------------------------------*/
@@ -6149,9 +6234,6 @@ Hero section5 start
 .hero-section5 .right-side {
   width: 58%;
 }
-.hero-section5 .hero-title {
-  font-size: 60px;
-}
 .hero-section5 .left-hand-shape {
   position: absolute;
   right: 10%;
@@ -6246,7 +6328,7 @@ About section2 start
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 368px;
+  max-width: 368px;
 }
 .about-section2 .right-side .img-box-sm img {
   border-radius: 205px 205px 0 0;
@@ -6272,17 +6354,34 @@ About section2 start
   font-weight: 900;
 }
 
+@media (max-width: 991px) {
+  .about-section2 .right-side .experience {
+    font-size: 18px;
+  }
+  .about-section2 .right-side .experience .year {
+    font-size: 36px;
+  }
+}
 /*----------------------------------------------
 About section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
 About section3 start
 ----------------------------------------------*/
+.about-section3 .img-box-big {
+  height: 100%;
+}
 .about-section3 .img-box-big img {
   border-radius: 20px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1;
 }
 .about-section3 .img-box-small img {
   border-radius: 20px;
+  width: 100%;
 }
 
 .custom-progress {
@@ -6362,7 +6461,6 @@ About section4 start
 }
 .admin-box .admin-text-box .admin-title {
   font-size: 20px;
-  font-weight: 700;
 }
 
 .about-feature-box {
@@ -6392,6 +6490,54 @@ About section4 start
 
 /*----------------------------------------------
 About section4 end
+----------------------------------------------*/
+/*----------------------------------------------
+05. Brands sections start
+----------------------------------------------*/
+.brands-section {
+  background-color: rgb(var(--bg-color4));
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.brand-item {
+  padding: 28px 40px;
+  border-radius: 5px;
+}
+.brand-item img {
+  min-width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.marquee-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  gap: 20px;
+}
+.marquee:hover .marquee-item-wrapper {
+  animation-play-state: paused;
+}
+
+.marquee-left .marquee-item-wrapper {
+  display: inline-block;
+  animation: marquee-left 40s infinite linear;
+}
+
+.marquee-item-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/*----------------------------------------------
+Brands section end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Service section start
@@ -6460,6 +6606,7 @@ About section4 end
   background-color: var(--bg-color2);
   position: relative;
   z-index: 0;
+  overflow: hidden;
 }
 .feature-section .section-header {
   max-width: 650px;
@@ -6531,6 +6678,11 @@ About section4 end
   margin-top: 24px;
 }
 
+@media (max-width: 991px) {
+  .feature-section .section-header {
+    margin: 0 auto 40px;
+  }
+}
 /*----------------------------------------------
 Feature section end
 ----------------------------------------------*/
@@ -6601,6 +6753,7 @@ Feature section end
 }
 .causes-box .img-box img {
   border-radius: 20px 20px 0 0;
+  width: 100%;
 }
 .causes-box .text-box {
   padding: 24px 16px;
@@ -7061,7 +7214,7 @@ Team section end
 }
 
 .team-box3 {
-  margin-right: 30px;
+  margin-right: 25px;
 }
 .team-box3:hover .img-box .social-container {
   right: -20px;
@@ -7075,6 +7228,9 @@ Team section end
 .team-box3 .img-box img {
   border-radius: 20px;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .team-box3 .img-box .social-container {
   top: 20px;
@@ -7111,6 +7267,16 @@ Team section end
   border: 1px solid rgb(var(--primary-color), 0.5);
 }
 
+@media (max-width: 991px) {
+  .team-section3 .button-box {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .team-box3 {
+    margin-right: 35px;
+  }
+}
 /*----------------------------------------------
 Team section3 end
 ----------------------------------------------*/
@@ -7282,6 +7448,7 @@ Testimonial section3 start
 ----------------------------------------------*/
 .testimonial-section3 {
   background: linear-gradient(270deg, rgba(19, 34, 27, 0) -57.56%, #13221B 98.76%), url(../img/testimonial3/testimonial-bg.png);
+  background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
@@ -7362,11 +7529,10 @@ CTA section start
   .cta-section .right-side .img-box {
     display: none;
   }
+  .cta-section-inner {
+    padding: 40px;
+  }
 }
-.cta-section-inner {
-  padding: 40px;
-}
-
 /*----------------------------------------------
 CTA section end
 ----------------------------------------------*/
@@ -7377,19 +7543,19 @@ CTA section2 start
   background-color: var(--bg-color3);
 }
 .cta-section.two .cta-section-inner {
-  padding: 0;
-  gap: 0;
   overflow: hidden;
+  z-index: 0;
+  position: relative;
 }
 .cta-section.two .left-side {
-  max-width: 634px;
-  padding: 103px 0 103px 80px;
+  width: 51%;
 }
 .cta-section.two .right-side .img-box {
   position: absolute;
   top: -100px;
   bottom: -100px;
   right: 0;
+  z-index: -1;
 }
 .cta-section.two .right-side .img-box img {
   -webkit-mask-image: url(../img/cta2/photorealistic-kid-refugee-camp-bg.png);
@@ -7404,6 +7570,17 @@ CTA section2 start
   height: 100%;
 }
 
+@media (max-width: 1199px) {
+  .cta-section.two .right-side .img-box {
+    top: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 991px) {
+  .cta-section.two .left-side {
+    width: 100%;
+  }
+}
 /*----------------------------------------------
 CTA section2 end
 ----------------------------------------------*/
@@ -7747,8 +7924,7 @@ Checkout section end
   transform: scale(1);
 }
 .blog-box-list .img-box {
-  width: 169px;
-  min-width: 169px;
+  width: 40%;
   height: 146px;
   overflow: hidden;
   border-radius: 8px;
@@ -7759,6 +7935,11 @@ Checkout section end
   border-radius: 8px;
   transition: var(--transition);
   transform: scale(1.05);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog-box-list .text-box {
+  width: 60%;
 }
 .blog-box-list .text-box .blog-title {
   margin-top: 24px;
@@ -7776,6 +7957,8 @@ Checkout section end
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .meta .left-side {
   display: flex;
@@ -7829,13 +8012,25 @@ Blog section2 start
   flex-direction: row;
 }
 .blog-box.two .img-box {
-  width: 326px;
+  width: 48%;
   height: 100%;
 }
 .blog-box.two .img-box img {
   height: 100%;
 }
+.blog-box.two .text-box {
+  width: 52%;
+}
 
+@media (max-width: 991px) {
+  .blog-box.two {
+    flex-direction: column;
+  }
+  .blog-box.two .img-box,
+  .blog-box.two .text-box {
+    width: 100%;
+  }
+}
 /*----------------------------------------------
 Blog section2 end
 ----------------------------------------------*/
@@ -7848,6 +8043,11 @@ Blog section3 start
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  .blog-section3 .section-header {
+    margin-bottom: 40px;
+  }
+}
 /*----------------------------------------------
 Blog section3 end
 ----------------------------------------------*/
@@ -7946,6 +8146,11 @@ Product details section end
   white-space: nowrap;
 }
 
+@media (max-width: 1199px) {
+  .newsletter-form {
+    flex-wrap: wrap;
+  }
+}
 .rtl .newsletter-form .form-control {
   padding: 10px 10px 10px 50px;
 }
@@ -8108,6 +8313,11 @@ Footer section2 start
   margin: 48px auto 0;
 }
 
+@media (max-width: 991px) {
+  .footer-widget.one h2 {
+    font-size: 28px;
+  }
+}
 /*----------------------------------------------
 Footer section2 end
 ----------------------------------------------*/
@@ -8121,7 +8331,7 @@ Footer section3 start
   gap: 30px;
 }
 .footer-section.three .newsletter-section .left-side {
-  width: 418px;
+  max-width: 418px;
 }
 .footer-section.three .newsletter-section .left-side h3 {
   color: rgb(var(--white));
@@ -8131,6 +8341,16 @@ Footer section3 start
   flex-grow: 1;
 }
 
+@media (max-width: 991px) {
+  .footer-section.three .newsletter-section {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-section.three .newsletter-section {
+    flex-direction: column;
+  }
+}
 /*----------------------------------------------
 Footer section3 end
 ----------------------------------------------*/
@@ -8183,30 +8403,43 @@ Copyright section end
 ----------------------------------------------*/
 .banner-section {
   position: relative;
-  overflow: hidden;
-  padding: 120px 0;
-}
-.banner-section h1 {
-  font-size: 48px;
-}
-.banner-section .search-box3 {
-  max-width: 620px;
-  margin: 25px auto 0;
+  padding: 175px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  background-image: linear-gradient(270deg, rgba(19, 34, 27, 0.4) 0.05%, #13221B 82.65%), url(../img/banner/banner-img.png);
 }
 
-.false-nav {
-  height: 96px;
+.breadcrumb-area {
+  color: rgb(var(--white));
+}
+.breadcrumb-area h3 {
+  text-transform: capitalize;
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: rgb(var(--white));
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .banner-section {
-    padding: 60px 0;
+    padding: 100px 0;
   }
-  .banner-section h1 {
-    font-size: 35px;
+}
+@media (max-width: 991px) {
+  .banner-section h3 {
+    font-size: 36px;
   }
   .breadcrumb-area {
     font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-section {
+    padding: 60px 0;
+  }
+  .banner-section h3 {
+    font-size: 28px;
   }
 }
 /*----------------------------------------------

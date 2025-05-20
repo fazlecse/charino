@@ -128,26 +128,21 @@ $(document).ready(function () {
         dotsEach: 3,
       },
       375: {
-        items: 2,
+        items: 1,
         nav: true,
         dots: false,
         dotsEach: 2,
       },
       768: {
-        items: 3,
-        nav: true,
-        dots: false,
-      },
-      992: {
-        items: 4,
-        nav: true,
-        dots: false,
-      },
-      1400: {
         items: 1,
         nav: true,
         dots: false,
       },
+      992: {
+        items: 1,
+        nav: true,
+        dots: false,
+      }
     },
   });
   // testimonial carousel3 end
@@ -172,19 +167,19 @@ $(document).ready(function () {
         dots: false,
         dotsEach: 3,
       },
-      375: {
+      426: {
         items: 2,
         nav: true,
         dots: false,
         dotsEach: 2,
       },
       768: {
-        items: 3,
+        items: 2,
         nav: true,
         dots: false,
       },
       992: {
-        items: 4,
+        items: 3,
         nav: true,
         dots: false,
       },
